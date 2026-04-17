@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { analyzeCV } from "../lib/claude";
 import { supabase } from "../lib/supabase";
 import type { AnalysisResult } from "../types";
@@ -11,13 +11,14 @@ export function useAnalyzer() {
 	const analyze = async (
 		cvText: string,
 		jobDescription: string,
-		jobTitle: string
+		jobTitle: string,
+		lang: string
 	) => {
 		setIsLoading(true);
 		setError(null);
 
 		try {
-			const analysisResult = await analyzeCV(cvText, jobDescription);
+			const analysisResult = await analyzeCV(cvText, jobDescription, lang);
 
 			const { error: insertError } = await supabase.from("analyses").insert({
 				job_title: jobTitle,
@@ -40,5 +41,10 @@ export function useAnalyzer() {
 		}
 	};
 
-	return { isLoading, error, result, analyze };
+	const resetResult = useCallback(() => {
+		setResult(null);
+		setError(null);
+	}, []);
+
+	return { isLoading, error, result, analyze, resetResult };
 }
