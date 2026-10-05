@@ -70,7 +70,7 @@ Deno.serve(async (req: Request) => {
         Authorization: `Bearer ${groqApiKey}`,
       },
       body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
+        model: "openai/gpt-oss-20b",
         max_tokens: 2000,
         messages: [
           {
