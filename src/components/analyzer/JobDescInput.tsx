@@ -1,3 +1,6 @@
+import { useId } from "react";
+import { useLang } from "../../context/LangContext";
+
 type JobDescInputProps = {
   value: string;
   onChange: (value: string) => void;
@@ -13,30 +16,50 @@ export function JobDescInput({
   onJobTitleChange,
   isLoading,
 }: JobDescInputProps) {
+  const { t } = useLang();
+  const jobTitleId = useId();
+  const jobDescId = useId();
+  const counterId = useId();
+
   const counterColorClass =
     value.length < 100 ? "text-gray-400" : "text-gray-600";
 
   return (
-    <div>
+    <div className="space-y-2.5">
+      <label htmlFor={jobTitleId} className="sr-only">
+        {t.analyze.jobTitlePlaceholder}
+      </label>
       <input
+        id={jobTitleId}
         type="text"
         value={jobTitle}
         onChange={(event) => onJobTitleChange(event.target.value)}
-        placeholder="Nombre del cargo — ej: Desarrollador Frontend"
+        placeholder={t.analyze.jobTitlePlaceholder}
         disabled={isLoading}
-        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gray-400 mb-3"
+        aria-describedby={counterId}
+        className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-gray-400"
       />
 
+      <label htmlFor={jobDescId} className="sr-only">
+        {t.analyze.jobDescPlaceholder}
+      </label>
       <textarea
+        id={jobDescId}
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        placeholder="Pega aquí la descripción completa de la oferta..."
+        placeholder={t.analyze.jobDescPlaceholder}
         disabled={isLoading}
-        className="w-full min-h-48 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gray-400 resize-none"
+        aria-describedby={counterId}
+        className="w-full min-h-40 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-gray-400 resize-y"
       />
 
-      <p className={`text-xs text-right mt-1 ${counterColorClass}`}>
-        {value.length}
+      <p
+        id={counterId}
+        className={`text-xs text-right ${counterColorClass}`}
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        {value.length} / 30000
       </p>
     </div>
   );

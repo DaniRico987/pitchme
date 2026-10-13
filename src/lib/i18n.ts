@@ -4,6 +4,7 @@ export const translations = {
   es: {
     nav: {
       analyze: "Analizar CV",
+      history: "Historial",
     },
     home: {
       badge: "Beta gratuita · Sin registro",
@@ -16,10 +17,45 @@ export const translations = {
       stat2Value: "3 min",
       stat2Label: "para obtener tu análisis",
       cta: "Analizar mi CV →",
+      secondaryCta: "Ver cómo funciona",
       subCta: "Sin registro · Sin tarjeta · 100% gratis",
+      previewLabel: "Vista previa del análisis",
+      previewTitle: "Así se ve tu análisis",
+      previewDesc:
+        "Puntuación global, palabras clave faltantes, coincidentes y sugerencias concretas por sección.",
+      featuresTitle: "Todo lo que necesitas para destacar",
+      featuresDesc:
+        "Análisis profundo, palabras clave, sugerencias accionables y exportación profesional.",
+      feature1Title: "Análisis ATS Completo",
+      feature1Desc:
+        "Simulamos cómo leen los sistemas de filtrado automático tu CV y detectamos problemas críticos.",
+      feature2Title: "Keyword Gap Inteligente",
+      feature2Desc:
+        "Comparamos tu CV con la oferta y te mostramos exactamente qué palabras clave faltan o sobran.",
+      feature3Title: "Sugerencias Accionables",
+      feature3Desc:
+        "No solo detectamos problemas, te decimos exactamente cómo reescribir cada sección para mejorar.",
+      feature4Title: "Exportación Profesional",
+      feature4Desc:
+        "Genera un PDF branded con tu análisis completo para compartir o guardar en tu historial.",
+      howItWorksTitle: "En 3 pasos tienes tu análisis",
+      step1Title: "Sube tu CV",
+      step1Desc:
+        "Arrastra tu PDF o haz click para seleccionarlo. Extraemos el texto automáticamente.",
+      step2Title: "Pega la oferta",
+      step2Desc:
+        "Copia la descripción completa del puesto y el título. Cuánto más detalle, mejor el análisis.",
+      step3Title: "Obtén tu puntuación",
+      step3Desc:
+        "Recibe tu score, keywords faltantes, coincidentes y sugerencias por sección en segundos.",
+      finalCtaTitle: "¿Listo para mejorar tu CV?",
+      finalCtaDesc:
+        "Miles de candidatos ya usan PitchMe para pasar los filtros ATS y conseguir entrevistas.",
+      footer: "© 2025 PitchMe. Hecho para candidatos que quieren destacar.",
     },
     analyze: {
       title: "Sube tu información",
+      subtitle: "Completa los 3 pasos y obtén tu análisis detallado",
       uploadTitle: "Arrastra tu CV aquí",
       uploadSub: "o haz click para seleccionar · Solo PDF",
       jobTitlePlaceholder: "Nombre del cargo — ej: Desarrollador Frontend",
@@ -27,21 +63,88 @@ export const translations = {
       analyzeBtn: "Analizar mi CV →",
       analyzing: "Analizando tu CV...",
       emptyState: "Tu análisis aparecerá aquí",
+      emptyStateTitle: "Tu análisis aparecerá aquí",
+      emptyStateDesc:
+        "Sube tu CV y pega la oferta de empleo para ver la puntuación, palabras clave y sugerencias.",
       scoreLabel: "sobre 100 puntos",
+      step1Title: "CV",
+      step1Desc: "Sube tu PDF",
+      step2Title: "Oferta",
+      step2Desc: "Pega la descripción",
+      step3Title: "Resultado",
+      step3Desc: "Obtén tu score",
+      keywordGap: {
+        title: "Análisis de Palabras Clave",
+        matchLabel: "Coincidencia",
+        missingLabel: "Faltantes",
+        matchingLabel: "Coincidentes",
+        extraLabel: "Adicionales en CV",
+        noMissing: "¡Todas las keywords están presentes!",
+        noMatching: "Sin coincidencias",
+        noExtra: "Sin keywords adicionales",
+        statsLabel: "Estadísticas",
+      },
     },
     upload: {
       drag: "Arrastra tu CV aquí",
       sub: "o haz click para seleccionar · Solo PDF",
+      extracting: "Extrayendo texto del PDF...",
+      error: "Error al procesar el PDF",
+      tryAgain: "Intentar de nuevo",
+      errors: {
+        invalidType: "Solo se permiten archivos PDF",
+        tooLarge: "El archivo debe ser menor a 10MB",
+        emptyPdf:
+          "No se pudo extraer texto del PDF. El archivo puede estar escaneado o protegido con contraseña.",
+      },
     },
     badges: {
       critical: "Crítico",
       improve: "Mejorar",
       good: "Bien",
     },
+    errors: {
+      somethingWentWrong: "Algo salió mal",
+      unexpectedError: "Ocurrió un error inesperado",
+      tryAgain: "Reintentar",
+    },
+    toast: {
+      close: "Cerrar",
+    },
+    auth: {
+      signInTitle: "Iniciar sesión",
+      signInSubtitle: "Ingresa tu email para acceder",
+      signUpTitle: "Crear cuenta",
+      signUpSubtitle: "Ingresa tu email para crear una cuenta",
+      emailLabel: "Email",
+      signInBtn: "Iniciar sesión",
+      signUpBtn: "Crear cuenta",
+      hasAccount: "¿Ya tienes cuenta?",
+      noAccount: "¿No tienes cuenta?",
+      signInLink: "Inicia sesión",
+      signUpLink: "Regístrate",
+      checkingAuth: "Verificando sesión...",
+      callbackSuccess: "Sesión iniciada correctamente",
+      callbackError: "Error al iniciar sesión",
+    },
+    history: {
+      title: "Historial de análisis",
+      subtitle: "Tus análisis previos",
+      backToAnalyze: "Nuevo análisis",
+      emptyTitle: "Sin análisis aún",
+      emptySubtitle: "Tu primer análisis aparecerá aquí",
+      firstAnalysisBtn: "Crear mi primer análisis",
+      scoreLabel: "Puntuación",
+      jobDescription: "Descripción del puesto",
+      cvPreview: "Vista previa del CV",
+      exportBtn: "Exportar",
+      deleteBtn: "Eliminar",
+    },
   },
   en: {
     nav: {
       analyze: "Analyze CV",
+      history: "History",
     },
     home: {
       badge: "Free beta · No signup",
@@ -54,10 +157,45 @@ export const translations = {
       stat2Value: "3 min",
       stat2Label: "to get your analysis",
       cta: "Analyze my CV →",
+      secondaryCta: "See how it works",
       subCta: "No signup · No card · 100% free",
+      previewLabel: "Analysis Preview",
+      previewTitle: "This is what your analysis looks like",
+      previewDesc:
+        "Overall score, missing keywords, matches, and actionable suggestions per section.",
+      featuresTitle: "Everything you need to stand out",
+      featuresDesc:
+        "Deep analysis, keyword gaps, actionable suggestions, and professional export.",
+      feature1Title: "Complete ATS Analysis",
+      feature1Desc:
+        "We simulate how ATS systems read your CV and detect critical issues.",
+      feature2Title: "Smart Keyword Gap",
+      feature2Desc:
+        "We compare your CV with the job posting and show exactly which keywords are missing or extra.",
+      feature3Title: "Actionable Suggestions",
+      feature3Desc:
+        "We don't just detect problems, we tell you exactly how to rewrite each section to improve.",
+      feature4Title: "Professional Export",
+      feature4Desc:
+        "Generate a branded PDF with your complete analysis to share or save in your history.",
+      howItWorksTitle: "Get your analysis in 3 steps",
+      step1Title: "Upload CV",
+      step1Desc:
+        "Drag your PDF or click to select. We extract text automatically.",
+      step2Title: "Paste Job",
+      step2Desc:
+        "Copy the full job description and title. More detail = better analysis.",
+      step3Title: "Get Score",
+      step3Desc:
+        "Receive your score, missing keywords, matches, and section suggestions in seconds.",
+      finalCtaTitle: "Ready to improve your CV?",
+      finalCtaDesc:
+        "Thousands of candidates use PitchMe to pass ATS filters and land interviews.",
+      footer: "© 2025 PitchMe. Made for candidates who want to stand out.",
     },
     analyze: {
       title: "Upload your information",
+      subtitle: "Complete the 3 steps and get your detailed analysis",
       uploadTitle: "Drag your CV here",
       uploadSub: "or click to select · PDF only",
       jobTitlePlaceholder: "Job title — e.g., Frontend Developer",
@@ -65,16 +203,82 @@ export const translations = {
       analyzeBtn: "Analyze my CV →",
       analyzing: "Analyzing your CV...",
       emptyState: "Your analysis will appear here",
+      emptyStateTitle: "Your analysis will appear here",
+      emptyStateDesc:
+        "Upload your CV and paste the job description to see score, keywords, and suggestions.",
       scoreLabel: "out of 100 points",
+      step1Title: "CV",
+      step1Desc: "Upload your PDF",
+      step2Title: "Job",
+      step2Desc: "Paste description",
+      step3Title: "Result",
+      step3Desc: "Get your score",
+      keywordGap: {
+        title: "Keyword Gap Analysis",
+        matchLabel: "Match",
+        missingLabel: "Missing",
+        matchingLabel: "Matching",
+        extraLabel: "Extra in CV",
+        noMissing: "All keywords are present!",
+        noMatching: "No matches",
+        noExtra: "No extra keywords",
+        statsLabel: "Statistics",
+      },
     },
     upload: {
       drag: "Drag your CV here",
       sub: "or click to select · PDF only",
+      extracting: "Extracting text from PDF...",
+      error: "Error processing PDF",
+      tryAgain: "Try again",
+      errors: {
+        invalidType: "Only PDF files are allowed",
+        tooLarge: "File size must be less than 10MB",
+        emptyPdf:
+          "Could not extract text from PDF. The file may be scanned or password-protected.",
+      },
     },
     badges: {
       critical: "Critical",
       improve: "Improve",
       good: "Good",
+    },
+    errors: {
+      somethingWentWrong: "Something went wrong",
+      unexpectedError: "An unexpected error occurred",
+      tryAgain: "Try again",
+    },
+    toast: {
+      close: "Close",
+    },
+    auth: {
+      signInTitle: "Sign in",
+      signInSubtitle: "Enter your email to access",
+      signUpTitle: "Create account",
+      signUpSubtitle: "Enter your email to create an account",
+      emailLabel: "Email",
+      signInBtn: "Sign in",
+      signUpBtn: "Create account",
+      hasAccount: "Already have an account?",
+      noAccount: "Don't have an account?",
+      signInLink: "Sign in",
+      signUpLink: "Sign up",
+      checkingAuth: "Checking session...",
+      callbackSuccess: "Signed in successfully",
+      callbackError: "Error signing in",
+    },
+    history: {
+      title: "Analysis History",
+      subtitle: "Your previous analyses",
+      backToAnalyze: "New analysis",
+      emptyTitle: "No analyses yet",
+      emptySubtitle: "Your first analysis will appear here",
+      firstAnalysisBtn: "Create my first analysis",
+      scoreLabel: "Score",
+      jobDescription: "Job description",
+      cvPreview: "CV preview",
+      exportBtn: "Export",
+      deleteBtn: "Delete",
     },
   },
 } as const;
