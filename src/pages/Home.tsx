@@ -96,9 +96,9 @@ export function Home() {
               {t.home.badge}
             </div>
 
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-gray-900 mb-4">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.2] tracking-tight text-gray-900 mb-4">
               <span className="block">{t.home.headline1}</span>
-              <span className="block bg-gradient-to-r from-gray-900 to-gray-400 bg-clip-text text-transparent">
+              <span className="inline-block bg-gradient-to-r from-gray-900 to-gray-400 bg-clip-text text-transparent leading-normal">
                 {t.home.headline2}
               </span>
             </h1>
