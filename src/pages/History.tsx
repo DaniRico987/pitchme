@@ -35,14 +35,14 @@ export function History() {
       if (error) throw error;
 
       // Map snake_case DB columns to camelCase TypeScript types
-      const mappedHistory = (data || []).map(
+      const mappedHistory: AnalysisRecord[] = (data || []).map(
         (item: Record<string, unknown>) => ({
-          id: item.id,
-          jobTitle: item.job_title,
-          jobDescription: item.job_description,
-          cvText: item.cv_text,
-          result: item.result,
-          createdAt: item.created_at,
+          id: String(item.id),
+          jobTitle: String(item.job_title),
+          jobDescription: String(item.job_description),
+          cvText: String(item.cv_text),
+          result: item.result as AnalysisRecord["result"],
+          createdAt: String(item.created_at),
         }),
       );
 
